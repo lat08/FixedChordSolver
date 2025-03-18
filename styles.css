@@ -141,7 +141,7 @@ input:focus {
   margin-bottom: 1rem;
 }
 
-.tab-btn {
+.tab-btn, .reset-zoom-btn {
   padding: 0.75rem;
   background-color: #e2e8f0;
   border: none;
@@ -150,7 +150,12 @@ input:focus {
   cursor: pointer;
   transition: background-color 0.2s;
 }
-
+.reset-zoom-btn{
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 20px !important;
+  border-radius: 5px;
+}
 .tab-btn:first-child {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
