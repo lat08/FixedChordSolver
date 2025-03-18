@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script> <--- IMPORT PLUGIN ZOOM CDN -->
     <script type="text/javascript" async
         src="https://polyfill.io/v3/polyfill.min.js?features=es6">
     </script>
@@ -119,32 +121,25 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="visualization-header">
-                                <h2>Graphical Visualization</h2>
+                                <h2>Mô phỏng</h2>
                                 <div class="step-navigation">
-                                    <button id="prevStepBtn" class="nav-btn" disabled>&lt; Previous</button>
+                                    <button id="prevStepBtn" class="nav-btn" disabled>&lt; Trang trước</button>
                                     <span id="stepIndicator">Step 1 of 1</span>
-                                    <button id="nextStepBtn" class="nav-btn" disabled>Next &gt;</button>
+                                    <button id="nextStepBtn" class="nav-btn" disabled>Trang tiếp theo &gt;</button>
                                 </div>
                             </div>
                         </div>
                         <div class="card-content">
-                            <div class="chart-container">
-                                <canvas id="chartCanvas"></canvas>
-                            </div>
-                            
                             <div class="step-info">
-                                <h3>Current Step Information</h3>
+                                <h3>Thông tin bước lặp hiện tại</h3>
                                 <p id="currentStepInfo"></p>
                             </div>
-                            
-                            <div class="method-explanation">
-                                <h3>Method Explanation</h3>
-                                <p>
-                                    The Fixed Chord Method uses a fixed point and calculates the next approximation 
-                                    by drawing a chord from the current point to the fixed point. The method continues 
-                                    until the error is less than epsilon or the maximum number of iterations is reached.
-                                </p>
+                            <div class="chart-container">
+                                <canvas id="chartCanvas"></canvas>
+                                <button id="resetZoomBtn" class="reset-zoom-btn">Reset Zoom</button>  <!-- Nút Reset Zoom HTML -->
+
                             </div>
+                            
                         </div>
                     </div>
                 </div>
